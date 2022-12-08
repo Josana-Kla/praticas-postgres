@@ -5,7 +5,7 @@
 Nesta prática foi recebido um banco de dados já existente com alguns dados. O banco foi configurado seguindo as instruções abaixo e em seguida os exercícios foram resolvidos 😃
 
 > ### **Como configurar o banco**
-🔺Importante: Para todo processo listado abaixo, apenas copie e cole os códigos disponibilizados, vamos falar mais detalhes desses códigos em outro momento.
+🔺Importante: Para todo processo listado abaixo, apenas copie e cole os códigos disponibilizados.
 
 #### **Configuração inicial** 
 
@@ -117,6 +117,9 @@ INSERT INTO "compras" ("id_cliente", "id_produto") VALUES
 
 #
 > ### **Estrutura do banco**
+
+<details open="open">
+
 O banco possui as seguintes tabelas:
 
 - `clientes`
@@ -129,7 +132,10 @@ O banco possui as seguintes tabelas:
     - `id_cliente`, número com id do cliente da compra,
     - `id_produto`, número com id do produto comprado.
 
+</details>
+
 #
+
 > ### **Exercícios**
 <details>
 Com um terminal aberto conectado ao banco , execute as seguintes consultas:
