@@ -1,3 +1,5 @@
+CREATE DATABASE clothex;
+
 CREATE TABLE addresses(
     id SERIAL PRIMARY KEY,
     address TEXT NOT NULL
@@ -18,7 +20,7 @@ CREATE TABLE purchaseStatus(
 
 CREATE TABLE purchaseDate(
     id SERIAL PRIMARY KEY,
-    date DATE NOT NULL,
+    date DATE NOT NULL DEFAULT NOW(),
     "idPurchaseStatus" INTEGER NOT NULL REFERENCES "purchaseStatus"("id"),
     "idUser" INTEGER NOT NULL REFERENCES "users"("id"),
     "idAddress" INTEGER NOT NULL REFERENCES "addresses"("id")
