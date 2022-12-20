@@ -1,5 +1,5 @@
 /* BONUS CUSTOMER PHONES: */
-CREATE TYPE type_p as ENUM('landiline', 'mobile');
+CREATE TYPE "typeP" as ENUM('landiline', 'mobile');
 
 DROP TABLE IF EXISTS "customerPhones";
 
@@ -7,7 +7,7 @@ CREATE TABLE "customerPhones"(
     id SERIAL PRIMARY KEY,
     "customerId" INTEGER NOT NULL REFERENCES "customers"("id"),
     number TEXT NOT NULL,
-    type type_p
+    type "typeP" NOT NULL
 );
 
 /* BONUS TRANSACTIONS: */
@@ -19,8 +19,8 @@ CREATE TABLE transactions(
     id SERIAL PRIMARY KEY,
     "bankAccountId" INTEGER NOT NULL REFERENCES "bankAccount"("id"),
     amount INTEGER NOT NULL,
-    type type_t,
-    time TIMESTAMP NOT NULL DEFAULT NOW(),
+    type type_t NOT NULL,
+    time TIMESTAMP NOT NULL WITHOUT TIME ZONE DEFAULT NOW(),
     description TEXT NOT NULL,
     cancelled BOOLEAN NOT NULL DEFAULT FALSE
 );
